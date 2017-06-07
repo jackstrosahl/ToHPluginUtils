@@ -25,13 +25,13 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.generator.ChunkGenerator;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginLoader;
+import org.tyrannyofheaven.bukkit.util.IDBPlugin;
 
 import com.avaje.ebean.EbeanServer;
 
-public class MyPlugin implements Plugin {
+public class MyPlugin implements IDBPlugin {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {

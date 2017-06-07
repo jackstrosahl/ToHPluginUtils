@@ -44,7 +44,7 @@ public class ToHNamingConvention extends UnderscoreNamingConvention {
      * 
      * @param plugin the JavaPlugin subclass
      */
-    public ToHNamingConvention(JavaPlugin plugin, String defaultSchemaTableName) {
+    public ToHNamingConvention(DBPlugin plugin, String defaultSchemaTableName) {
         // Set up null placeholders
         for (Class<?> clazz : plugin.getDatabaseClasses()) {
             tableNames.put(clazz.getSimpleName(), null);
