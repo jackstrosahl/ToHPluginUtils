@@ -12,18 +12,18 @@
   </scm>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <bukkit.version>1.12-pre6-SNAPSHOT</bukkit.version>
+    <bukkit.version>1.16.1-R0.1-SNAPSHOT</bukkit.version>
   </properties>
   <repositories>
     <repository>
       <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
   </repositories>
   <dependencies>
     <dependency>
-      <groupId>org.bukkit</groupId>
-      <artifactId>bukkit</artifactId>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot-api</artifactId>
       <version>${bukkit.version}</version>
     </dependency>
     <dependency>
@@ -41,6 +41,11 @@
       <groupId>javax.persistence</groupId>
       <artifactId>persistence-api</artifactId>
       <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot</artifactId>
+      <version>1.16.1-R0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <build>

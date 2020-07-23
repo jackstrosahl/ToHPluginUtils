@@ -33,7 +33,6 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.util.StringUtil;
 import org.junit.Before;
 import org.junit.Test;
-import org.tyrannyofheaven.bukkit.util.permissions.PermissionException;
 
 public class CommandTest {
 
@@ -112,6 +111,13 @@ public class CommandTest {
             public String getName() {
                 return null;
             }
+
+            @Override
+            public Spigot spigot()
+            {
+                return this.spigot();
+            }
+
             @Override
             public void sendMessage(String[] arg0) {
             }
@@ -193,7 +199,7 @@ public class CommandTest {
         try {
             he.execute(dummySender, "secret", "secret", new String[0]);
         }
-        catch (PermissionException e) {
+        catch (RuntimeException e) {
             good = true;
         }
         Assert.assertTrue(good);
